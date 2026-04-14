@@ -1,0 +1,126 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roshan | Cybersecurity Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }#loader { position: fixed; inset: 0; background: #0b0f19; display: flex; align-items: center; justify-content: center; z-index: 9999; }
+.spinner { width: 40px; height: 40px; border: 4px solid #1f2937; border-top: 4px solid #3b82f6; border-radius: 50%; animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+.progress { height: 8px; background: #1f2937; border-radius: 9999px; overflow: hidden; }
+.bar { height: 100%; width: 0%; background: #3b82f6; transition: width 1.5s ease; }
+
+  </style>
+</head>
+<body class="bg-gray-950 text-gray-200">  <!-- Loader -->  <div id="loader"><div class="spinner"></div></div>  <!-- Navbar -->  <nav class="fixed w-full bg-gray-900/80 backdrop-blur border-b border-gray-800 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <h1 class="font-semibold">Roshan</h1>
+      <button id="menuBtn" class="md:hidden">☰</button>
+      <div id="menu" class="hidden md:flex space-x-6 text-sm">
+        <a href="#about" class="hover:text-blue-400">About</a>
+        <a href="#skills" class="hover:text-blue-400">Skills</a>
+        <a href="#projects" class="hover:text-blue-400">Projects</a>
+        <a href="#certificates" class="hover:text-blue-400">Certificates</a>
+        <a href="#contact" class="hover:text-blue-400">Contact</a>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden flex-col px-4 pb-4 md:hidden bg-gray-900">
+      <a href="#about" class="py-2">About</a>
+      <a href="#skills" class="py-2">Skills</a>
+      <a href="#projects" class="py-2">Projects</a>
+      <a href="#certificates" class="py-2">Certificates</a>
+      <a href="#contact" class="py-2">Contact</a>
+    </div>
+  </nav>  <!-- Hero -->  <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6">
+    <h1 class="text-3xl sm:text-5xl font-bold mb-4 fade-in">Hi, I'm Roshan</h1>
+    <p class="text-gray-400 max-w-xl text-sm sm:text-base fade-in">
+      Cybersecurity enthusiast focused on penetration testing, OS development, and solving real-world CTF challenges.
+    </p>
+    <div class="mt-6 fade-in">
+      <a href="#projects" class="bg-blue-600 px-5 py-2 rounded-lg hover:bg-blue-700 text-sm sm:text-base">View Work</a>
+    </div>
+  </section>  <!-- About -->  <section id="about" class="max-w-5xl mx-auto px-4 sm:px-6 py-12 fade-in">
+    <h2 class="text-2xl sm:text-3xl font-semibold mb-4">About Me</h2>
+    <p class="text-gray-400 text-sm sm:text-base">
+      I am a student passionate about cybersecurity and low-level systems. I specialize in penetration testing, Linux environments, and building operating systems from scratch.
+    </p>
+  </section>  <!-- Skills -->  <section id="skills" class="max-w-5xl mx-auto px-4 sm:px-6 py-12 fade-in">
+    <h2 class="text-2xl sm:text-3xl font-semibold mb-6">Skills</h2>
+    <div class="space-y-4">
+      <div>
+        <p class="text-sm sm:text-base">Linux / Kali Linux</p>
+        <div class="progress"><div class="bar" data-width="90%"></div></div>
+      </div>
+      <div>
+        <p>Penetration Testing</p>
+        <div class="progress"><div class="bar" data-width="85%"></div></div>
+      </div>
+      <div>
+        <p>C Programming</p>
+        <div class="progress"><div class="bar" data-width="80%"></div></div>
+      </div>
+      <div>
+        <p>JavaScript</p>
+        <div class="progress"><div class="bar" data-width="75%"></div></div>
+      </div>
+    </div>
+  </section>  <!-- Projects -->  <section id="projects" class="max-w-5xl mx-auto px-4 sm:px-6 py-12 fade-in">
+    <h2 class="text-2xl sm:text-3xl font-semibold mb-6">Projects</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+      <div class="bg-gray-900 p-4 sm:p-5 rounded-xl border border-gray-800 hover:border-blue-500 transition">
+        <h3 class="text-lg sm:text-xl font-semibold">Custom Operating System</h3>
+        <p class="text-gray-400 text-sm mt-2">Developing a Linux-based OS with custom GUI and file system.</p>
+      </div>
+      <div class="bg-gray-900 p-4 sm:p-5 rounded-xl border border-gray-800 hover:border-blue-500 transition">
+        <h3 class="text-lg sm:text-xl font-semibold">CTF Challenges</h3>
+        <p class="text-gray-400 text-sm mt-2">Solved multiple cybersecurity challenges and competitions.</p>
+      </div>
+    </div>
+  </section>  <!-- Certificates -->  <section id="certificates" class="max-w-5xl mx-auto px-4 sm:px-6 py-12 fade-in">
+    <h2 class="text-2xl sm:text-3xl font-semibold mb-6">Certificates</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+      <div class="bg-gray-900 p-4 rounded-xl border border-gray-800">
+        <p class="text-sm">TryHackMe CTF Participation</p>
+      </div>
+      <div class="bg-gray-900 p-4 rounded-xl border border-gray-800">
+        <p class="text-sm">Cybersecurity Achievements</p>
+      </div>
+    </div>
+  </section>  <!-- Contact -->  <section id="contact" class="max-w-5xl mx-auto px-4 sm:px-6 py-12 fade-in">
+    <h2 class="text-2xl sm:text-3xl font-semibold mb-4">Contact</h2>
+    <p class="text-gray-400 text-sm">Email: your@email.com</p>
+  </section>  <script>
+    // Loader
+    window.addEventListener('load', () => {
+      document.getElementById('loader').style.display = 'none';
+    });
+
+    // Mobile menu toggle
+    document.getElementById('menuBtn').onclick = () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    };
+
+    // Scroll animation
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Skill bars animation
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('.bar').forEach(bar => {
+        const rect = bar.getBoundingClientRect();
+        if (rect.top < window.innerHeight) bar.style.width = bar.dataset.width;
+      });
+    });
+  </script></body>
+</html>
